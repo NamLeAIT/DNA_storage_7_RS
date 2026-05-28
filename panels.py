@@ -1038,11 +1038,11 @@ def render_panel_4_experiment() -> None:
 
         wm = st.session_state.get("wetlab_metrics", {}) or {}
         rm = st.session_state.get("reconstruction_metrics", {}) or {}
-        m1, m2, m3, m4 = st.columns(4)
+        m1, m2 = st.columns(2)
         m1.metric(METRICS["sequencing_reads"], wm.get("reads_generated", len(reads)))
         m2.metric(METRICS["recovered_strands"], rm.get("reconstructed_strands", 0))
-        m3.metric(METRICS["reads_recovered"], f"{float(rm.get('payload_consensus_accuracy', 0)):.4f}")
-        m4.metric(METRICS["dna_ready_for_decoding"], f"{float(rm.get('decode_payload_accuracy', 0)):.4f}")
+        # m3.metric(METRICS["reads_recovered"], f"{float(rm.get('payload_consensus_accuracy', 0)):.4f}")
+        # m4.metric(METRICS["dna_ready_for_decoding"], f"{float(rm.get('decode_payload_accuracy', 0)):.4f}")
 
         rec_df = _reconstruction_table(rec_rows)
         st.dataframe(rec_df, use_container_width=True, hide_index=True)
