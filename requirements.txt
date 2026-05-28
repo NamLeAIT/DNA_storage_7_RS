@@ -1,14 +1,9 @@
-# Core app
 streamlit>=1.32
 pandas>=2.0
-numpy>=1.24
 Pillow>=10.0
+numpy>=1.24
 
-# Audio/video compression support
-# imageio-ffmpeg installs an FFmpeg executable with the Python package on common platforms.
 imageio>=2.34
 imageio-ffmpeg>=0.4.9
-
-# Optional audio helpers
 pydub>=0.25.1
 soundfile>=0.12

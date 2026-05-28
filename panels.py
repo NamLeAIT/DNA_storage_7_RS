@@ -731,7 +731,7 @@ def render_panel_3_encoding() -> None:
         c1, c2, c3, c4, c5 = st.columns(5)
         c1.metric(METRICS["dna_mapping"], _display_mapping(st.session_state.get("encoding_mapping", mapping)))
         c2.metric(METRICS["dna_length"], f"{len(dna):,} nt")
-        c3.metric(METRICS.get("dna_expansion", "DNA length increase"), f"{dna_expansion:.2f}×")
+        c3.metric(METRICS.get("dna_expansion", "DNA expansion"), f"{dna_expansion:.2f}×")
         c4.metric(METRICS["gc_content"], f"{gc_content(dna):.3f}")
         c5.metric(METRICS["longest_hp"], homopolymer_stats(dna).get("longest", 0))
 
@@ -851,9 +851,9 @@ def render_panel_4_experiment() -> None:
         # ------------------------------------------------------------------
         # B. Optional Strand-level Errors
         # ------------------------------------------------------------------
-        # st.markdown("---")
-        # st.markdown(f"#### {FIELDS['strand_level_errors']}")
-        enable_strand_errors = st.checkbox(FIELDS.get("add_strand_errors", "Advanced setting"), value=bool(st.session_state.get("advanced_error_rows")), key="enable_strand_level_errors")
+        st.markdown("---")
+        st.markdown(f"#### {FIELDS['strand_level_errors']}")
+        enable_strand_errors = st.checkbox(FIELDS.get("add_strand_errors", "Add strand-level errors"), value=bool(st.session_state.get("advanced_error_rows")), key="enable_strand_level_errors")
 
         if enable_strand_errors:
             with st.container(border=True):
@@ -943,7 +943,7 @@ def render_panel_4_experiment() -> None:
         wetlab_rows = err_rows if wetlab_input_source == "Error strands" and err_rows else rows
 
         a, b, c, d, e = st.columns(5)
-        coverage = a.number_input(FIELDS["coverage"], min_value=1, max_value=100, value=1, step=1, key="err_cov")
+        coverage = a.number_input(FIELDS["coverage"], min_value=1, max_value=100, value=10, step=1, key="err_cov")
         sub = b.number_input(FIELDS["substitution"], min_value=0.0, max_value=0.2, value=0.001, step=0.001, format="%.4f", key="err_sub")
         ins = c.number_input(FIELDS["insertion"], min_value=0.0, max_value=0.2, value=0.0, step=0.001, format="%.4f", key="err_ins")
         dele = d.number_input(FIELDS["deletion"], min_value=0.0, max_value=0.2, value=0.0, step=0.001, format="%.4f", key="err_del")
