@@ -851,8 +851,8 @@ def render_panel_4_experiment() -> None:
         # ------------------------------------------------------------------
         # B. Optional Strand-level Errors
         # ------------------------------------------------------------------
-        st.markdown("---")
-        st.markdown(f"#### {FIELDS['strand_level_errors']}")
+        # st.markdown("---")
+        # st.markdown(f"#### {FIELDS['strand_level_errors']}")
         enable_strand_errors = st.checkbox(FIELDS.get("add_strand_errors", "Add strand-level errors"), value=bool(st.session_state.get("advanced_error_rows")), key="enable_strand_level_errors")
 
         if enable_strand_errors:
