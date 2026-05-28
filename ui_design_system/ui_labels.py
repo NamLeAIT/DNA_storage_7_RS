@@ -79,7 +79,7 @@ TABS = {
 
 METRICS = {
     "input_type": "Input type",
-    "detected_type": "File type",
+    "detected_type": "File Extention",
     "input_size": "Input size",
 
     "storage_method": "Storage method",
@@ -108,7 +108,7 @@ METRICS = {
 
     "input_dna": "Input DNA",
     "decoded_size": "Decoded size",
-    "restored_type": "File type",
+    "restored_type": "File Extension",
     "file_can_open": "File can open",
     "restored_correctly": "File correctly",
 
@@ -269,7 +269,7 @@ DOWNLOAD_FILES = {
 # Add any metric keys that older UI files may not include.
 METRICS.update({
     "input_type": "Input type",
-    "detected_type": "File type",
+    "detected_type": "File Extension",
     "input_size": "Input size",
     "storage_method": "Storage method",
     "stored_size": "Stored size",
