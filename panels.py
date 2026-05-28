@@ -530,7 +530,7 @@ def render_panel_1_upload() -> None:
             m = magic_dict(data)
             c1, c2, c3 = st.columns(3)
             c1.metric("Type", get_domain(path, data))
-            c2.metric("Extension", m.get("kind", "unknown"))
+            c2.metric("File extension", m.get("kind", "unknown"))
             c3.metric("Size", fmt_bytes(len(data)))
             preview_file(path, FIELDS["input_preview"])
 
