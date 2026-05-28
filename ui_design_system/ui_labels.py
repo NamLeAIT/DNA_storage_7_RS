@@ -108,9 +108,9 @@ METRICS = {
 
     "input_dna": "Input DNA",
     "decoded_size": "Decoded size",
-    "restored_type": "Restored type",
+    "restored_type": "File type",
     "file_can_open": "File can open",
-    "restored_correctly": "Restored correctly",
+    "restored_correctly": "File correctly",
 
     "pixel_accuracy": "Pixel accuracy",
     "changed_pixels": "Changed pixels",
@@ -228,7 +228,7 @@ FIELDS = {
     "sequencing_input": "Sequencing input",
     "recovered_dna": "Recovered DNA",
     "input_dna_preview": "Input DNA preview",
-    "restored_preview": "Restored preview",
+    "restored_preview": "File preview",
     "image_comparison": "Image comparison",
     "text_comparison": "Text comparison",
 }
@@ -285,7 +285,7 @@ METRICS.update({
     "sequencing_read_errors": "Sequencing read errors",
     "recovered_strands": "Recovered strands",
     "input_dna": "Input DNA",
-    "restored_size": "Restored size",
+    "restored_size": "File size",
 })
 
 
