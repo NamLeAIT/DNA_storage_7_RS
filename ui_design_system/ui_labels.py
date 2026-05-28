@@ -79,7 +79,7 @@ TABS = {
 
 METRICS = {
     "input_type": "Input type",
-    "detected_type": "Detected type",
+    "detected_type": "File type",
     "input_size": "Input size",
 
     "storage_method": "Storage method",
@@ -269,7 +269,7 @@ DOWNLOAD_FILES = {
 # Add any metric keys that older UI files may not include.
 METRICS.update({
     "input_type": "Input type",
-    "detected_type": "Detected type",
+    "detected_type": "File type",
     "input_size": "Input size",
     "storage_method": "Storage method",
     "stored_size": "Stored size",
